@@ -1,0 +1,109 @@
+{{#extend "default" }}{{#content "body"}}
+{{>navigation}}
+<main>
+  <section class="h-screen">
+    <div class="container px-5 lg:px-10 lg:pt-24">
+      <div class="flex flex-col text-left ">
+        <h1 class="p-0 m-0 mt-40 mb-10 lg:mt-20 font-bold tracking-tighter relative">
+          <span class="text-3xl leading-none lg:text-6xl text-blue-500">
+            Transform Your 
+            <span class="relative"><span class="highlight hidden lg:inline">Vacation Rentals</span><span class="inline lg:hidden">Vacation Rentals</span></span>
+          </span>
+          <br>
+          <span class="text-1xl leading-none lg:text-3xl text-black">
+            Elevate your online presence with our expertly crafted
+            <span class="relative"><span class="highlight">Website Designs</span></span>
+          </span>
+        </h1>
+      </div>
+    </div>
+    {{>stripes}}
+    <h1 class="p-0 mt-20 lg:mt-40 mx-5 font-bold tracking-tighter flex justify-end">
+      <span class="text-1xl leading-none lg:text-4xl text-black">
+        <a href="#contact">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300">
+            Get Started
+          </button>
+        </a>
+      </span>
+    </h1>
+  </section>
+  <section class="bg-blue-50 scrollFade">
+    <div class="container px-5 lg:px-10 lg:pt-24 flex flex-col lg:flex-row items-center">
+      <div class="m-5 lg:w-1/2 lg:pr-10">
+        <!-- Image on the left -->
+        <img src="./images/desktop-computer.jpg" alt="Your Image" class="max-w-full h-auto border-4 border-gray-100 box-shadow">
+      </div>
+      <div class="lg:w-1/2 mt-0 lg:mt-0">
+        <!-- Text on the right -->
+        <h2 class="text-3xl lg:text-4xl font-bold text-blue-500">
+          Elegant Website Design for Your Vacation Rental Properties
+        </h2>
+        <p class="mt-4 text-lg lg:text-xl text-black">
+          At Daybreak Travel, we specialize in crafting exquisite website designs tailored to showcase your vacation rental properties. Our expert team is dedicated to helping you leave a lasting impression on your guests.
+        </p>
+        <p class="mt-4 mb-10 text-lg lg:text-xl text-black">
+          Our designs are more than just visually stunning; they're responsive and user-friendly, ensuring your potential guests have a seamless experience when exploring your offerings. With our affordable solutions, you can establish a distinctive brand identity and efficiently manage client bookings, all within a unified platform.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="bg-white">
+    <div class="container px-5 py-24 mx-auto text-black">
+      <div class="flex flex-wrap mx-auto ">
+        <div class="w-full lg:w-2/4 ">
+          {{> main-card }}
+        </div>
+        <div class="w-full lg:w-2/4">
+          {{> main-card }}
+        </div>
+        <div class="w-full lg:w-2/4 ">
+          {{> main-card }}
+        </div>
+        <div class="w-full lg:w-2/4">
+          {{> main-card }}
+        </div>
+      </div>
+    </div>
+  </section>
+    <script>
+        // Your JavaScript code here
+        const fadeElements = document.getElementsByClassName('scrollFade');
+
+        const scrollFade = () => {
+            const viewportBottom = window.scrollY + window.innerHeight;
+
+            for (let index = 0; index < fadeElements.length; index++) {
+                const element = fadeElements[index];
+                const rect = element.getBoundingClientRect();
+
+                const elementFourth = rect.height / 4;
+                const fadeInPoint = window.innerHeight - elementFourth;
+                const fadeOutPoint = -(rect.height / 1);
+
+                if (rect.top <= fadeInPoint) {
+                    element.classList.add('scrollFade--visible');
+                    element.classList.add('scrollFade--animate');
+                    element.classList.remove('scrollFade--hidden');
+                } else {
+                    element.classList.remove('scrollFade--visible');
+                    element.classList.add('scrollFade--hidden');
+                }
+
+                if (rect.top <= fadeOutPoint) {
+                    element.classList.remove('scrollFade--visible');
+                    element.classList.add('scrollFade--hidden');
+                }
+            }
+        }
+
+        document.addEventListener('scroll', scrollFade);
+        window.addEventListener('resize', scrollFade);
+        document.addEventListener('DOMContentLoaded', () => {
+            scrollFade();
+        });
+    </script>
+</main>
+{{/content}}{{/extend}}

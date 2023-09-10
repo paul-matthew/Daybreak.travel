@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <title>Wicked HTML Starter</title>
+  </head>
+
+  <body class="bg-white">
+    <div
+      class="w-full text-black bg-blue-200 lg:bg-white lg:bg-opacity-80 fixed top-0 z-10"
+    >
+      <div
+        x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-1"
+      >
+        <div class="flex flex-row items-center justify-between p-4 text-black">
+          <a href="./index.html"
+            ><div
+              class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
+            >
+              <div class="inline-flex items-center">
+                <div
+                  class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-300 border-2 border-orange-500"
+                ></div>
+                <h2
+                  class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
+                >
+                  daybreak.travel
+                </h2>
+              </div>
+            </div></a
+          >
+          <button
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline transition-transform duration-300"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-12 h-12">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        >
+          <ul
+            class="items-center inline-block list-none lg:inline-flex text-blue-500"
+          >
+            <li>
+              <a
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
+                href="./index.html"
+                >home</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
+                href="./blogpost.html"
+                >blog post</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
+                href="./now.html"
+                >now</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
+                href="./contact.html"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main>
+      <section class="h-screen">
+        <div class="container px-5 lg:px-10 lg:pt-24">
+          <div class="flex flex-col text-left">
+            <h1
+              class="p-0 m-0 mt-40 mb-10 lg:mt-20 font-bold tracking-tighter relative"
+            >
+              <span class="text-3xl leading-none lg:text-6xl text-blue-500">
+                Transform Your
+                <span class="relative"
+                  ><span class="highlight hidden lg:inline"
+                    >Vacation Rentals</span
+                  ><span class="inline lg:hidden">Vacation Rentals</span></span
+                >
+              </span>
+              <br />
+              <span class="text-1xl leading-none lg:text-3xl text-black">
+                Elevate your online presence with our expertly crafted
+                <span class="relative"
+                  ><span class="highlight">Website Designs</span></span
+                >
+              </span>
+            </h1>
+          </div>
+        </div>
+        <div
+          class="stripe bg-blue-400"
+          style="animation: stripeAnimation 6s 0s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-300"
+          style="animation: stripeAnimation 6s 0.2s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-200"
+          style="animation: stripeAnimation 6s 0.4s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-100"
+          style="animation: stripeAnimation 6s 0.6s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-50"
+          style="animation: stripeAnimation 6s 0.8s forwards"
+        ></div>
+
+        <h1
+          class="p-0 mt-20 lg:mt-40 mx-5 font-bold tracking-tighter flex justify-end"
+        >
+          <span class="text-1xl leading-none lg:text-4xl text-black">
+            <a href="#contact">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300"
+              >
+                Get Started
+              </button>
+            </a>
+          </span>
+        </h1>
+      </section>
+      <section class="bg-blue-50 scrollFade">
+        <div
+          class="container px-5 lg:px-10 lg:pt-24 flex flex-col lg:flex-row items-center"
+        >
+          <div class="m-5 lg:w-1/2 lg:pr-10">
+            <!-- Image on the left -->
+            <img
+              src="./images/desktop-computer.jpg"
+              alt="Your Image"
+              class="max-w-full h-auto border-4 border-gray-100 box-shadow"
+            />
+          </div>
+          <div class="lg:w-1/2 mt-0 lg:mt-0">
+            <!-- Text on the right -->
+            <h2 class="text-3xl lg:text-4xl font-bold text-blue-500">
+              Elegant Website Design for Your Vacation Rental Properties
+            </h2>
+            <p class="mt-4 text-lg lg:text-xl text-black">
+              At Daybreak Travel, we specialize in crafting exquisite website
+              designs tailored to showcase your vacation rental properties. Our
+              expert team is dedicated to helping you leave a lasting impression
+              on your guests.
+            </p>
+            <p class="mt-4 mb-10 text-lg lg:text-xl text-black">
+              Our designs are more than just visually stunning; they're
+              responsive and user-friendly, ensuring your potential guests have
+              a seamless experience when exploring your offerings. With our
+              affordable solutions, you can establish a distinctive brand
+              identity and efficiently manage client bookings, all within a
+              unified platform.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="container px-5 py-24 mx-auto text-black">
+          <div class="flex flex-wrap mx-auto">
+            <div class="w-full lg:w-2/4">
+              <div class="flex flex-wrap justify-start p-4">
+                <div
+                  class="w-full mx-auto border-2 border-black shadow-whiterock"
+                >
+                  <img
+                    class="object-scale-down w-full ..."
+                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
+                    alt=""
+                  />
+
+                  <div class="px-2 py-6 lg:px-10">
+                    <h1
+                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                    >
+                      blog entry title
+                    </h1>
+
+                    <p
+                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
+                    >
+                      Refers to the appearance of all the text on your website.
+                      ... It's the size of different runs of text in relation to
+                      one another, and the history behind each font family. A
+                      lot of your typography decisions will come from a
+                      designer....
+                    </p>
+                    <div class="py-4">
+                      <a
+                        href="./blogpost.html"
+                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
+                        href="./blogpost.html"
+                      >
+                        read more &rightarrow;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/4">
+              <div class="flex flex-wrap justify-start p-4">
+                <div
+                  class="w-full mx-auto border-2 border-black shadow-whiterock"
+                >
+                  <img
+                    class="object-scale-down w-full ..."
+                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
+                    alt=""
+                  />
+
+                  <div class="px-2 py-6 lg:px-10">
+                    <h1
+                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                    >
+                      blog entry title
+                    </h1>
+
+                    <p
+                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
+                    >
+                      Refers to the appearance of all the text on your website.
+                      ... It's the size of different runs of text in relation to
+                      one another, and the history behind each font family. A
+                      lot of your typography decisions will come from a
+                      designer....
+                    </p>
+                    <div class="py-4">
+                      <a
+                        href="./blogpost.html"
+                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
+                        href="./blogpost.html"
+                      >
+                        read more &rightarrow;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/4">
+              <div class="flex flex-wrap justify-start p-4">
+                <div
+                  class="w-full mx-auto border-2 border-black shadow-whiterock"
+                >
+                  <img
+                    class="object-scale-down w-full ..."
+                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
+                    alt=""
+                  />
+
+                  <div class="px-2 py-6 lg:px-10">
+                    <h1
+                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                    >
+                      blog entry title
+                    </h1>
+
+                    <p
+                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
+                    >
+                      Refers to the appearance of all the text on your website.
+                      ... It's the size of different runs of text in relation to
+                      one another, and the history behind each font family. A
+                      lot of your typography decisions will come from a
+                      designer....
+                    </p>
+                    <div class="py-4">
+                      <a
+                        href="./blogpost.html"
+                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
+                        href="./blogpost.html"
+                      >
+                        read more &rightarrow;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/4">
+              <div class="flex flex-wrap justify-start p-4">
+                <div
+                  class="w-full mx-auto border-2 border-black shadow-whiterock"
+                >
+                  <img
+                    class="object-scale-down w-full ..."
+                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
+                    alt=""
+                  />
+
+                  <div class="px-2 py-6 lg:px-10">
+                    <h1
+                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                    >
+                      blog entry title
+                    </h1>
+
+                    <p
+                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
+                    >
+                      Refers to the appearance of all the text on your website.
+                      ... It's the size of different runs of text in relation to
+                      one another, and the history behind each font family. A
+                      lot of your typography decisions will come from a
+                      designer....
+                    </p>
+                    <div class="py-4">
+                      <a
+                        href="./blogpost.html"
+                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
+                        href="./blogpost.html"
+                      >
+                        read more &rightarrow;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        // Your JavaScript code here
+        const fadeElements = document.getElementsByClassName('scrollFade');
+
+        const scrollFade = () => {
+          const viewportBottom = window.scrollY + window.innerHeight;
+
+          for (let index = 0; index < fadeElements.length; index++) {
+            const element = fadeElements[index];
+            const rect = element.getBoundingClientRect();
+
+            const elementFourth = rect.height / 4;
+            const fadeInPoint = window.innerHeight - elementFourth;
+            const fadeOutPoint = -(rect.height / 1);
+
+            if (rect.top <= fadeInPoint) {
+              element.classList.add('scrollFade--visible');
+              element.classList.add('scrollFade--animate');
+              element.classList.remove('scrollFade--hidden');
+            } else {
+              element.classList.remove('scrollFade--visible');
+              element.classList.add('scrollFade--hidden');
+            }
+
+            if (rect.top <= fadeOutPoint) {
+              element.classList.remove('scrollFade--visible');
+              element.classList.add('scrollFade--hidden');
+            }
+          }
+        };
+
+        document.addEventListener('scroll', scrollFade);
+        window.addEventListener('resize', scrollFade);
+        document.addEventListener('DOMContentLoaded', () => {
+          scrollFade();
+        });
+      </script>
+    </main>
+    <footer class="bg-black">
+      <div
+        class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row"
+      >
+        <a
+          href="https://www.wickedtemplates.com/"
+          class="flex items-center justify-center font-medium text-white title-font md:justify-start"
+        >
+          <div
+            class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
+          >
+            <div class="inline-flex items-center">
+              <div
+                class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-300 border-2 border-orange-500"
+              ></div>
+              <h2
+                class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
+              >
+                daybreak.travel
+              </h2>
+            </div>
+          </div>
+        </a>
+        <p
+          class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-blueGray-200 sm:py-2 sm:mt-0"
+        >
+          © 2020
+          <a
+            href="https://twitter.com/wickedtemplates"
+            class="ml-1 text-white hover:text-blue-500"
+            rel="noopener noreferrer"
+            target="_blank"
+            >@wickedtemplates</a
+          >
+        </p>
+        <nav class="inline-flex items-center justify-start gap-2 mt-4 lg:mt-0">
+          <p
+            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
+          >
+            <a
+              href="https://www.wickedtemplates.com/templates.html"
+              rel="noopener noreferrer"
+              >Templates</a
+            >
+          </p>
+          <p
+            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
+          >
+            <a
+              href="https://www.wickedtemplates.com/demos.html"
+              rel="noopener noreferrer"
+              >Freebies</a
+            >
+          </p>
+          <p
+            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
+          >
+            <a
+              href="https://www.wickedtemplates.com/pricing.html"
+              rel="noopener noreferrer"
+              >Pricing</a
+            >
+          </p>
+        </nav>
+        <span
+          class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
+        >
+          <a class="text-white hover:text-blue-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-white hover:text-blue-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-white hover:text-blue-500">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-white hover:text-blue-500">
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </body>
+</html>

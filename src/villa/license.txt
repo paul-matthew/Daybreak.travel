@@ -1,0 +1,11 @@
+Model Information:
+* title:	Villa by the sea
+* source:	https://sketchfab.com/3d-models/villa-by-the-sea-747061111b684583968ac4759c3b69ac
+* author:	Melina S. (https://sketchfab.com/melinasavvidou)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Villa by the sea" (https://sketchfab.com/3d-models/villa-by-the-sea-747061111b684583968ac4759c3b69ac) by Melina S. (https://sketchfab.com/melinasavvidou) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
