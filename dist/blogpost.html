@@ -15,6 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+    />
     <title>Wicked HTML Starter</title>
   </head>
 
@@ -27,13 +35,13 @@
         class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-1"
       >
         <div class="flex flex-row items-center justify-between p-4 text-black">
-          <a href="./index.html"
+          <a href="/"
             ><div
               class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
             >
               <div class="inline-flex items-center">
                 <div
-                  class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-300 border-2 border-orange-500"
+                  class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
                 ></div>
                 <h2
                   class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
@@ -63,9 +71,13 @@
             </svg>
           </button>
         </div>
+        <!-- <nav x-show="open" x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-300 transform" x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-95" class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"> -->
         <nav
           :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+          class="MobileMenu flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
           <ul
             class="items-center inline-block list-none lg:inline-flex text-blue-500"
@@ -215,18 +227,18 @@
     </section>
     <footer class="bg-black">
       <div
-        class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row"
+        class="container flex flex-col items-center lg:items-start px-5 py-8 mx-auto sm:flex-row"
       >
         <a
           href="https://www.wickedtemplates.com/"
-          class="flex items-center justify-center font-medium text-white title-font md:justify-start"
+          class="flex items-center justify-center font-medium text-white title-font md:justify-start p-5"
         >
           <div
             class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
           >
             <div class="inline-flex items-center">
               <div
-                class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-300 border-2 border-orange-500"
+                class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
               ></div>
               <h2
                 class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
@@ -237,18 +249,18 @@
           </div>
         </a>
         <p
-          class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-blueGray-200 sm:py-2 sm:mt-0"
+          class="lg:mt-5 text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-blueGray-200 sm:py-2 sm:mt-0"
         >
-          © 2020
+          © 2023
           <a
             href="https://twitter.com/wickedtemplates"
             class="ml-1 text-white hover:text-blue-500"
             rel="noopener noreferrer"
             target="_blank"
-            >@wickedtemplates</a
+            >PM Daybreak Designs</a
           >
         </p>
-        <nav class="inline-flex items-center justify-start gap-2 mt-4 lg:mt-0">
+        <nav class="inline-flex items-center justify-start gap-2 mt-4 lg:mt-5">
           <p
             class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
           >
@@ -278,7 +290,7 @@
           </p>
         </nav>
         <span
-          class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
+          class="inline-flex justify-center mt-4 px-5 sm:ml-auto sm:mt-0 sm:justify-start lg:mt-5"
         >
           <a class="text-white hover:text-blue-500">
             <svg
@@ -348,5 +360,10 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js"
+      defer
+    ></script>
+    <!-- <script type="module" src="./js/threedmodel.js"></script> -->
   </body>
 </html>

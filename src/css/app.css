@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 0, 0.5); /* Yellow with 30% opacity */
-    z-index: -1; /* Place the highlight behind the text */
+    z-index: 4; /* Place the highlight behind the text */
     animation: highlightExpand 5s ease forwards;
   }
 
@@ -132,7 +132,104 @@
     }
   }
   
-  /*BOX SHADOW*/
+  /*BOX and TEXT SHADOWs*/
   .box-shadow {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* You can adjust the shadow values as needed */
   }
+
+
+  .text-shadow{ 
+    text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+   /*BACKGROUND BANNER IMAGES*/
+  .container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: imageTransition 20s infinite linear;
+}
+  
+@keyframes imageTransition {
+    0% {
+        background-position: left center;
+        background-image: url('/images/cottage1b.jpg');
+    }
+    25% {
+        background-position: left center;
+        background-image: url('/images/cottage2.jpg');
+    }
+    50% {
+        background-position: right center;
+        background-image: url('/images/cottage3b.jpg');
+    }
+    75% {
+        background-position: right center;
+        background-image: url('/images/cottage4.jpg');
+    }
+    100% {
+        background-position: left center;
+        background-image: url('/images/cottage1b.jpg');
+    }
+}
+
+/*MENU DROPDOWN*/
+
+@media (max-width: 600px) {
+  .MobileMenu {
+    /* Add your styles to make the dropdown smoother */
+    /* For example, you can add transition properties for smoother animations */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .MobileMenu.flex {
+    animation:menuease 1s ease forwards;
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes menuease {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    max-height: 70px;
+    overflow: hidden; /* Hide any content that overflows the max-height */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    max-height: 200px;
+    overflow: hidden; /* Hide any content that overflows the max-height */
+  }
+}

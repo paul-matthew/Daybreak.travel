@@ -15,11 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+    />
     <title>Wicked HTML Starter</title>
   </head>
 
   <body class="bg-white">
-    <div class="w-full text-black bg-white">
+    <div
+      class="w-full text-black bg-blue-200 lg:bg-white lg:bg-opacity-80 fixed top-0 z-10"
+    >
       <div
         x-data="{ open: false }"
         class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-1"
@@ -30,17 +40,19 @@
               class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
             >
               <div class="inline-flex items-center">
-                <div class="w-2 h-2 p-2 mr-2 rounded-full bg-beta-300"></div>
+                <div
+                  class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
+                ></div>
                 <h2
-                  class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-beta-300"
+                  class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
                 >
-                  wickedtemplates
+                  daybreak.travel
                 </h2>
               </div>
             </div></a
           >
           <button
-            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline transition-transform duration-300"
             @click="open = !open"
           >
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-12 h-12">
@@ -59,14 +71,20 @@
             </svg>
           </button>
         </div>
+        <!-- <nav x-show="open" x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-300 transform" x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-95" class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"> -->
         <nav
           :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+          class="MobileMenu flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
-          <ul class="items-center inline-block list-none lg:inline-flex">
+          <ul
+            class="items-center inline-block list-none lg:inline-flex text-blue-500"
+          >
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./index.html"
                 >home</a
               >
@@ -74,21 +92,21 @@
 
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./blogpost.html"
                 >blog post</a
               >
             </li>
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./now.html"
                 >now</a
               >
             </li>
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./contact.html"
                 >contact</a
               >
@@ -98,63 +116,242 @@
       </div>
     </div>
     <main>
-      <section>
+      <section class="h-screen">
         <div class="container px-5 lg:px-10 lg:pt-24">
           <div class="flex flex-col text-left">
             <h1
-              class="p-0 m-0 mb-2 text-4xl font-bold tracking-tighter text-black lg:text-6xl"
+              class="px-5 m-0 mt-40 mb-10 lg:mt-20 tracking-tighter relative z-5"
             >
-              <span class="italic leading-none"> Template </span>
+              <span
+                class="text-3xl leading-none lg:text-6xl text-blue-500 z-5"
+                style="font-family: 'Bebas Neue', sans-serif"
+              >
+                Transform Your
+                <span class="z-5 relative"
+                  ><span class="highlight hidden lg:inline"
+                    >Vacation Rentals</span
+                  ><span class="inline lg:hidden">Vacation Rentals</span></span
+                >
+              </span>
               <br />
-              <span class="text-6xl leading-none uppercase lg:text-12xl">
-                WT-001
+              <span
+                class="text-1xl leading-none lg:text-3xl text-black"
+                style="font-family: 'Permanent Marker', sans-serif"
+              >
+                Elevate your online presence with our expertly crafted
+                <span class="relative"
+                  ><span class="highlight">Website Design</span></span
+                >
               </span>
             </h1>
           </div>
         </div>
-        <div class="w-full h-12 p-0 m-0 bg-beta-200"></div>
-        <div class="w-full h-12 p-0 m-0 bg-beta-300"></div>
-        <div class="w-full h-12 p-0 m-0 bg-beta-400"></div>
-        <div class="w-full h-12 p-0 m-0 bg-beta-500"></div>
-        <div class="w-full h-12 p-0 m-0 bg-beta-600"></div>
+        <div
+          class="stripe bg-blue-400"
+          style="animation: stripeAnimation 6s 0s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-300"
+          style="animation: stripeAnimation 6s 0.2s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-200"
+          style="animation: stripeAnimation 6s 0.4s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-100"
+          style="animation: stripeAnimation 6s 0.6s forwards"
+        ></div>
+        <div
+          class="stripe bg-blue-50"
+          style="animation: stripeAnimation 6s 0.8s forwards"
+        ></div>
+
+        <h1 class="p-0 mt-20 lg:mt-40 mx-5 tracking-tighter flex justify-end">
+          <span class="text-1xl leading-none lg:text-4xl text-black">
+            <a href="#contact">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300"
+                style="font-family: 'Bebas Neue', sans-serif"
+              >
+                Get Started
+              </button>
+            </a>
+          </span>
+        </h1>
       </section>
-      <section class="bg-white">
-        <div class="container px-5 py-24 mx-auto text-black">
+      <section class="bg-blue-50 scrollFade">
+        <div
+          class="px-5 lg:px-10 lg:pt-24 flex flex-col lg:flex-row items-center"
+        >
+          <div class="m-5 lg:w-1/2 lg:pr-10">
+            <!-- <canvas id="3d-container z-20" style="width: 100%; height: 100%; border:solid red"></canvas>     -->
+            <!-- Image on the left -->
+            <img
+              src="./images/desktop-computer.jpg"
+              alt="Your Image"
+              class="max-w-full h-auto border-4 border-gray-100 box-shadow"
+            />
+          </div>
+          <div class="lg:w-1/2 mt-0 lg:mt-0">
+            <!-- Text on the right -->
+            <h2
+              class="text-4xl lg:text-7xl text-blue-500"
+              style="font-family: 'Bebas Neue', sans-serif"
+            >
+              Elegant Website Design for Your Vacation Rental Properties
+            </h2>
+            <p class="mt-4 text-lg lg:text-xl text-black">
+              At Daybreak Travel, we specialize in crafting exquisite website
+              designs tailored to showcase your vacation rental properties. Our
+              expert team is dedicated to helping you leave a lasting impression
+              on your guests.
+            </p>
+            <p class="mt-4 mb-10 text-lg lg:text-xl text-black">
+              Our designs are more than just visually stunning; they're
+              responsive and user-friendly, ensuring your potential guests have
+              a seamless experience when exploring your offerings. With our
+              affordable solutions, you can establish a distinctive brand
+              identity and efficiently manage client bookings, all within a
+              unified platform.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white scrollFade">
+        <h2
+          class="text-4xl lg:text-7xl text-blue-500 flex justify-center m-5"
+          style="font-family: 'Bebas Neue', sans-serif"
+        >
+          Transformative Design
+        </h2>
+        <!-- Toggle Buttons -->
+        <div class="text-center m-5">
+          <button
+            class="w-30 bg-blue-500 hover:bg-blue-700 text-sm text-white font-bold py-2 px-4 m-2 rounded shadow-lg transform hover:scale-105 transition-transform duration-300 design-toggle-button bg-blue-700 scale-105"
+            data-target="design1"
+          >
+            Agile
+          </button>
+          <button
+            class="w-30 bg-blue-500 hover:bg-blue-700 text-sm text-white font-bold py-2 px-4 m-2 rounded shadow-lg transform hover:scale-105 transition-transform duration-300 design-toggle-button"
+            data-target="design2"
+          >
+            Modern
+          </button>
+        </div>
+        <div
+          class="px-5 lg:px-10 lg:pt-24 flex flex-col lg:flex-row items-center mb-10 lg:mt-[-50px]"
+        >
+          <!-- Left Design -->
+          <div class="lg:w-1/2 lg:pr-10">
+            <!-- Image for Left Design -->
+            <div class="design-image" id="design1">
+              <img
+                src="./images/website1.jpg"
+                alt="Website Design 1"
+                class="w-full h-40 lg:h-80 border-4 border-gray-100 box-shadow object-cover"
+              />
+              <div class="mt-4 flex flex-col items-start">
+                <h3 class="text-2xl text-blue-500 font-semibold">
+                  Agile Web Design
+                </h3>
+                <p class="mt-2 text-lg text-black">
+                  Our Agile web designs are built for adaptability, ensuring
+                  your online presence can quickly respond to changing market
+                  trends and customer needs, providing a dynamic and flexible
+                  user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Design -->
+          <div class="lg:w-1/2 mt-0 lg:mt-0" style="align-self: flex-start">
+            <!-- Image for Right Design -->
+            <div
+              class="design-image flex flex-row"
+              id="design2"
+              style="display: none"
+            >
+              <img
+                src="./images/website2.jpg"
+                alt="Website Design 2"
+                class="w-full h-40 lg:h-80 border-4 border-gray-100 box-shadow object-cover"
+              />
+              <div class="mt-4 ml-4 flex flex-col items-start">
+                <h3 class="text-2xl text-blue-500 font-semibold">
+                  Modern Web Design
+                </h3>
+                <p class="mt-2 text-lg text-black">
+                  Our Modern web designs are characterized by sleek aesthetics,
+                  cutting-edge technology, and user-centric features, creating a
+                  contemporary digital environment that captivates and engages
+                  your audience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-blue-50 scrollFade">
+        <h2
+          class="text-4xl lg:text-7xl text-blue-500 flex justify-center pt-5"
+          style="font-family: 'Bebas Neue', sans-serif"
+        >
+          Design Packages
+        </h2>
+        <div class="px-5 py-2 mx-auto text-black">
           <div class="flex flex-wrap mx-auto">
             <div class="w-full lg:w-2/4">
+              <!-- MAIN CARD -->
               <div class="flex flex-wrap justify-start p-4">
                 <div
                   class="w-full mx-auto border-2 border-black shadow-whiterock"
                 >
-                  <img
-                    class="object-scale-down w-full ..."
-                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
-                    alt=""
-                  />
+                  <div style="max-height: 300px; overflow: hidden">
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="/images/cottage3b.jpg"
+                      alt=""
+                    />
+                  </div>
 
-                  <div class="px-2 py-6 lg:px-10">
+                  <div class="px-2 py-6 lg:px-10" style="min-height: 400px">
                     <h1
-                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                      class="text-base font-black tracking-widest text-black text-xl lg:text-3xl font-display"
                     >
-                      blog entry title
+                      Base Design Package
                     </h1>
 
                     <p
                       class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
                     >
-                      Refers to the appearance of all the text on your website.
-                      ... It's the size of different runs of text in relation to
-                      one another, and the history behind each font family. A
-                      lot of your typography decisions will come from a
-                      designer....
+                      The Base Design Package is designed for those who seek a
+                      <b class="text-red-500">fast and efficient</b> website
+                      launch. This package includes:
                     </p>
+                    <ul class="items-center block list-disc px-5">
+                      <li>
+                        A client consultation to align your vision with our
+                        expertise.
+                      </li>
+                      <li>
+                        Implementation of our designed platform tailored to your
+                        inputs.
+                      </li>
+                      <li>Reliable website hosting services.</li>
+                      <li>Efficient booking database management.</li>
+                    </ul>
                     <div class="py-4">
                       <a
                         href="./blogpost.html"
                         class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
                         href="./blogpost.html"
                       >
-                        read more &rightarrow;
+                        learn more &rightarrow;
                       </a>
                     </div>
                   </div>
@@ -162,119 +359,56 @@
               </div>
             </div>
             <div class="w-full lg:w-2/4">
+              <!-- MAIN CARD -->
               <div class="flex flex-wrap justify-start p-4">
                 <div
                   class="w-full mx-auto border-2 border-black shadow-whiterock"
                 >
-                  <img
-                    class="object-scale-down w-full ..."
-                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
-                    alt=""
-                  />
-
-                  <div class="px-2 py-6 lg:px-10">
-                    <h1
-                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
-                    >
-                      blog entry title
-                    </h1>
-
-                    <p
-                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
-                    >
-                      Refers to the appearance of all the text on your website.
-                      ... It's the size of different runs of text in relation to
-                      one another, and the history behind each font family. A
-                      lot of your typography decisions will come from a
-                      designer....
-                    </p>
-                    <div class="py-4">
-                      <a
-                        href="./blogpost.html"
-                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                        href="./blogpost.html"
-                      >
-                        read more &rightarrow;
-                      </a>
-                    </div>
+                  <div style="max-height: 300px; overflow: hidden">
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="/images/cottage4.jpg"
+                      alt=""
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full lg:w-2/4">
-              <div class="flex flex-wrap justify-start p-4">
-                <div
-                  class="w-full mx-auto border-2 border-black shadow-whiterock"
-                >
-                  <img
-                    class="object-scale-down w-full ..."
-                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
-                    alt=""
-                  />
 
-                  <div class="px-2 py-6 lg:px-10">
+                  <div class="px-2 py-6 lg:px-10" style="min-height: 400px">
                     <h1
-                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
+                      class="text-base font-black tracking-widest text-black text-xl lg:text-3xl font-display"
                     >
-                      blog entry title
+                      Premium Design Package
                     </h1>
 
                     <p
                       class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
                     >
-                      Refers to the appearance of all the text on your website.
-                      ... It's the size of different runs of text in relation to
-                      one another, and the history behind each font family. A
-                      lot of your typography decisions will come from a
-                      designer....
+                      The Premium Custom Design Package is ideal for clients who
+                      desire <b class="text-red-500">full customization</b> and
+                      want to craft a website that aligns perfectly with their
+                      unique branding. This comprehensive package offers:
                     </p>
+                    <ul class="items-center block list-disc px-5">
+                      <li>In-depth client consultation.</li>
+                      <li>Expert graphic design services.</li>
+                      <li>
+                        Customized website design to reflect your brand's
+                        identity.
+                      </li>
+                      <li>
+                        Top-notch website hosting for optimal performance.
+                      </li>
+                      <li>
+                        Premium booking database management to streamline your
+                        business operations.
+                      </li>
+                    </ul>
                     <div class="py-4">
                       <a
                         href="./blogpost.html"
                         class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
                         href="./blogpost.html"
                       >
-                        read more &rightarrow;
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full lg:w-2/4">
-              <div class="flex flex-wrap justify-start p-4">
-                <div
-                  class="w-full mx-auto border-2 border-black shadow-whiterock"
-                >
-                  <img
-                    class="object-scale-down w-full ..."
-                    src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
-                    alt=""
-                  />
-
-                  <div class="px-2 py-6 lg:px-10">
-                    <h1
-                      class="text-base font-black tracking-widest text-black lg:text-3xl font-display"
-                    >
-                      blog entry title
-                    </h1>
-
-                    <p
-                      class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md"
-                    >
-                      Refers to the appearance of all the text on your website.
-                      ... It's the size of different runs of text in relation to
-                      one another, and the history behind each font family. A
-                      lot of your typography decisions will come from a
-                      designer....
-                    </p>
-                    <div class="py-4">
-                      <a
-                        href="./blogpost.html"
-                        class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                        href="./blogpost.html"
-                      >
-                        read more &rightarrow;
+                        learn more &rightarrow;
                       </a>
                     </div>
                   </div>
@@ -284,6 +418,157 @@
           </div>
         </div>
       </section>
+
+      <section class="bg-white scrollFade">
+        <div class="text-center m-5">
+          <h2
+            class="text-3xl lg:text-5xl font-bold text-blue-500 mb-4"
+            style="font-family: 'Bebas Neue', sans-serif"
+          >
+            Showcase Your Vacation Rental Property and Stand Out from the
+            Competition
+          </h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Allow our team of experts to transform your vacation rental property
+            with our stunning website designs. Elevate your online presence and
+            attract more guests.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block bg-blue-500 hover:bg-blue-700 text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+          >
+            Request a Quote Today
+          </a>
+        </div>
+      </section>
+
+      <!-- <section class="bg-white">
+    <div class="px-5 py-24 mx-auto text-black">
+      <div class="flex flex-wrap mx-auto ">
+        <div class="w-full lg:w-2/4 ">
+          <div class="flex flex-wrap justify-start p-4 ">
+            <div class="w-full mx-auto border-2 border-black shadow-whiterock">
+          
+              <div style="max-height: 300px; overflow: hidden;">
+                <img class="w-full h-full object-cover object-center"
+                  src="https://cdn.dribbble.com/users/13774/screenshots/13954919/media/ec679d065d64e95d5b9017d05ca14bcb.png?compress=1&resize=800x600"
+                  alt="">
+              </div>
+              
+          
+              <div class="px-2 py-6 lg:px-10">
+                <h1 class="text-base font-black tracking-widest text-black lg:text-3xl font-display">
+                  blog entry title
+                </h1>
+          
+                <p class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md">
+                  Refers to the appearance of all the text on your website. ... It's the size of different runs of
+                  text in relation to one
+                  another, and the history behind each font family. A lot of your typography decisions will come from
+                  a designer....
+                </p>
+                <div class="py-4 ">
+                  <a href="./blogpost.html"
+                    class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
+                    href="./blogpost.html">
+                    read more &rightarrow;
+                  </a>
+                </div>
+          
+              </div>
+            </div>
+          </div>        </div>
+      </div>
+    </div>
+  </section> -->
+
+      <script>
+        // Scroll Fade START----------------------
+        const fadeElements = document.getElementsByClassName('scrollFade');
+
+        const scrollFade = () => {
+          const viewportBottom = window.scrollY + window.innerHeight;
+
+          for (let index = 0; index < fadeElements.length; index++) {
+            const element = fadeElements[index];
+            const rect = element.getBoundingClientRect();
+
+            const elementFourth = rect.height / 4;
+            const fadeInPoint = window.innerHeight - elementFourth;
+            const fadeOutPoint = -(rect.height / 1);
+
+            if (rect.top <= fadeInPoint) {
+              element.classList.add('scrollFade--visible');
+              element.classList.add('scrollFade--animate');
+              element.classList.remove('scrollFade--hidden');
+            } else {
+              element.classList.remove('scrollFade--visible');
+              element.classList.add('scrollFade--hidden');
+            }
+
+            if (rect.top <= fadeOutPoint) {
+              element.classList.remove('scrollFade--visible');
+              element.classList.add('scrollFade--hidden');
+            }
+          }
+        };
+
+        document.addEventListener('scroll', scrollFade);
+        window.addEventListener('resize', scrollFade);
+        document.addEventListener('DOMContentLoaded', () => {
+          scrollFade();
+        });
+
+        // Scroll Fade END----------------------
+
+        // Transformative Design Section----------
+        const designImages = document.querySelectorAll('.design-image');
+        const toggleButtons = document.querySelectorAll(
+          '.design-toggle-button'
+        );
+
+        toggleButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const target = button.getAttribute('data-target');
+
+            // Smoothly fade out all images
+            designImages.forEach((image) => {
+              image.style.transition = 'opacity 0.5s ease-in-out'; // Add a transition effect for opacity
+              image.style.opacity = '0'; // Set opacity to 0 to hide them gradually
+              image.style.pointerEvents = 'none'; // Disable pointer events to prevent clicking during transition
+            });
+
+            const selectedImage = document.getElementById(target);
+            if (selectedImage) {
+              setTimeout(() => {
+                // Delay setting opacity to 1 for smoother fade-in effect
+                selectedImage.style.transition = 'opacity 0.5s ease-in-out'; // Add a transition effect for opacity
+                selectedImage.style.opacity = '1'; // Set opacity to 1 to show it gradually
+                selectedImage.style.pointerEvents = 'auto'; // Enable pointer events for the selected image
+              }, 50); // Adjust the delay time as needed (50 milliseconds in this example)
+            }
+          });
+        });
+
+        const design1Button = document.querySelector('[data-target="design1"]');
+        const design2Button = document.querySelector('[data-target="design2"]');
+        const design1Image = document.getElementById('design1');
+        const design2Image = document.getElementById('design2');
+
+        design1Button.addEventListener('click', () => {
+          design1Image.style.display = 'block';
+          design2Image.style.display = 'none';
+          design1Button.classList.add('bg-blue-700', 'scale-105');
+          design2Button.classList.remove('bg-blue-700', 'scale-105');
+        });
+
+        design2Button.addEventListener('click', () => {
+          design1Image.style.display = 'none';
+          design2Image.style.display = 'block';
+          design2Button.classList.add('bg-blue-700', 'scale-105');
+          design1Button.classList.remove('bg-blue-700', 'scale-105');
+        });
+      </script>
     </main>
     <footer class="bg-black">
       <div
@@ -291,17 +576,19 @@
       >
         <a
           href="https://www.wickedtemplates.com/"
-          class="flex items-center justify-center font-medium text-white title-font md:justify-start"
+          class="flex items-center justify-center font-medium text-white title-font md:justify-start p-5"
         >
           <div
             class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
           >
             <div class="inline-flex items-center">
-              <div class="w-2 h-2 p-2 mr-2 rounded-full bg-beta-300"></div>
+              <div
+                class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
+              ></div>
               <h2
-                class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-beta-300"
+                class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
               >
-                wickedtemplates
+                daybreak.travel
               </h2>
             </div>
           </div>
@@ -348,7 +635,7 @@
           </p>
         </nav>
         <span
-          class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
+          class="inline-flex justify-center mt-4 px-5 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
         >
           <a class="text-white hover:text-blue-500">
             <svg
@@ -418,5 +705,10 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js"
+      defer
+    ></script>
+    <!-- <script type="module" src="./js/threedmodel.js"></script> -->
   </body>
 </html>

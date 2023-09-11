@@ -15,11 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+    />
     <title>Wicked HTML Starter</title>
   </head>
 
   <body class="bg-white">
-    <div class="w-full text-black bg-white">
+    <div
+      class="w-full text-black bg-blue-200 lg:bg-white lg:bg-opacity-80 fixed top-0 z-10"
+    >
       <div
         x-data="{ open: false }"
         class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-1"
@@ -30,17 +40,19 @@
               class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
             >
               <div class="inline-flex items-center">
-                <div class="w-2 h-2 p-2 mr-2 rounded-full bg-beta-300"></div>
+                <div
+                  class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
+                ></div>
                 <h2
-                  class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-beta-300"
+                  class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
                 >
-                  wickedtemplates
+                  daybreak.travel
                 </h2>
               </div>
             </div></a
           >
           <button
-            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline transition-transform duration-300"
             @click="open = !open"
           >
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-12 h-12">
@@ -59,14 +71,20 @@
             </svg>
           </button>
         </div>
+        <!-- <nav x-show="open" x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-300 transform" x-transition:leave-start="opacity-100 scale-100"
+    x-transition:leave-end="opacity-0 scale-95" class="flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row"> -->
         <nav
           :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+          class="MobileMenu flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
         >
-          <ul class="items-center inline-block list-none lg:inline-flex">
+          <ul
+            class="items-center inline-block list-none lg:inline-flex text-blue-500"
+          >
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./index.html"
                 >home</a
               >
@@ -74,21 +92,21 @@
 
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./blogpost.html"
                 >blog post</a
               >
             </li>
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./now.html"
                 >now</a
               >
             </li>
             <li>
               <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed text-beta-300 lg:ml-4 focus:outline-none focus:shadow-outline"
+                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./contact.html"
                 >contact</a
               >
@@ -357,17 +375,19 @@
       >
         <a
           href="https://www.wickedtemplates.com/"
-          class="flex items-center justify-center font-medium text-white title-font md:justify-start"
+          class="flex items-center justify-center font-medium text-white title-font md:justify-start p-5"
         >
           <div
             class="text-lg font-semibold tracking-widest rounded-lg focus:outline-none focus:shadow-outline"
           >
             <div class="inline-flex items-center">
-              <div class="w-2 h-2 p-2 mr-2 rounded-full bg-beta-300"></div>
+              <div
+                class="w-2 h-2 p-2 mr-2 rounded-full bg-yellow-200 border-2 border-orange-500 box-shadow"
+              ></div>
               <h2
-                class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-beta-300"
+                class="text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform tracking-relaxed hover:text-blue-500"
               >
-                wickedtemplates
+                daybreak.travel
               </h2>
             </div>
           </div>
@@ -414,7 +434,7 @@
           </p>
         </nav>
         <span
-          class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
+          class="inline-flex justify-center mt-4 px-5 sm:ml-auto sm:mt-0 sm:justify-start lg:ml-auto"
         >
           <a class="text-white hover:text-blue-500">
             <svg
@@ -484,5 +504,10 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js"
+      defer
+    ></script>
+    <!-- <script type="module" src="./js/threedmodel.js"></script> -->
   </body>
 </html>
