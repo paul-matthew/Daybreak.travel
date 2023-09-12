@@ -20,11 +20,9 @@
     {{>stripes}}
     <h1 class="p-0 mt-20 lg:mt-40 mx-5 tracking-tighter flex justify-end">
       <span class="text-1xl leading-none lg:text-4xl text-black">
-        <a href="#contact">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300" style="font-family: 'Bebas Neue', sans-serif;">
-            Get Started
-          </button>
-        </a>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300" style="font-family: 'Bebas Neue', sans-serif;" onclick="scrollToDespack()">
+          Get Started
+        </button>
       </span>
     </h1>
   </section>
@@ -90,7 +88,7 @@
   
   
   <section class="bg-blue-50 scrollFade">
-    <h2 class="text-4xl lg:text-7xl text-blue-500 flex justify-center pt-5" style="font-family: 'Bebas Neue', sans-serif;">
+    <h2 class="text-4xl lg:text-7xl text-blue-500 flex justify-center pt-5" style="font-family: 'Bebas Neue', sans-serif;"id='despack'>
       Design Packages
     </h2>
     <div class="px-5 py-2 mx-auto text-black">
@@ -115,16 +113,16 @@
                 <p class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md">
                   The Base Design Package is designed for those who seek a <b class="text-red-500">fast and efficient</b> website launch. This package includes:                
                 </p>
-                <ul class="items-center block list-disc px-5">
+                <ul class="items-center block list-disc px-5" style="min-height: 180px">
                   <li>A client consultation to align your vision with our expertise.</li>
                   <li>Implementation of our designed platform tailored to your inputs.</li>
                   <li>Reliable website hosting services.</li>
                   <li>Efficient booking database management.</li>
                 </ul>
                 <div class="py-4 ">
-                  <a href="./blogpost.html"
+                  <a href="./design-packages.html"
                     class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                    href="./blogpost.html">
+                  >
                     learn more &rightarrow;
                   </a>
                 </div>
@@ -152,7 +150,7 @@
           
                 <p class="mt-4 text-base font-medium leading-relaxed border-black lg:text-md">
                   The Premium Custom Design Package is ideal for clients who desire <b class="text-red-500">full customization</b> and want to craft a website that aligns perfectly with their unique branding. This comprehensive package offers:                </p>
-                <ul class="items-center block list-disc px-5">
+                <ul class="items-center block list-disc px-5" style="min-height: 160px">
                   <li>In-depth client consultation.</li>
                   <li>Expert graphic design services.</li>
                   <li>Customized website design to reflect your brand's identity.</li>
@@ -160,9 +158,9 @@
                   <li>Premium booking database management to streamline your business operations.</li>
                 </ul>
                 <div class="py-4 ">
-                  <a href="./blogpost.html"
+                  <a href="./design-packages.html#premium"
                     class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                    href="./blogpost.html">
+                  >
                     learn more &rightarrow;
                   </a>
                 </div>
@@ -183,9 +181,12 @@
       <p class="text-lg text-gray-700 mb-8">
         Allow our team of experts to transform your vacation rental property with our stunning website designs. Elevate your online presence and attract more guests.
       </p>
-      <a href="/contact.html" class="inline-block bg-blue-500 hover:bg-blue-700 text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300">
-        Request a Quote Today
+      <a href="/contact.html?subject=Requesting%20a%20Consultation">
+        <button class="bg-blue-500 text-2xl hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300" style="font-family: 'Bebas Neue', sans-serif;">
+          Request a Consultation
+        </button>
       </a>
+      
     </div>
   </section>
   
@@ -286,6 +287,38 @@
       design2Button.classList.add('bg-blue-700', 'scale-105');
       design1Button.classList.remove('bg-blue-700', 'scale-105');
     });
-  </script>    
+
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+  //SCROLL TO DESIGN PACKAGES WITH OFFSET
+    $(document).ready(function() {
+      $('#scroll-link').on('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        
+        var target = $('#despack'); // Get the target element
+        var offset = 60; // Set the offset (adjust as needed)
+        
+        // Scroll to the target element with an offset
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 500); // Adjust the duration as needed
+      });
+    });
+
+    function scrollToDespack() {
+    var target = document.getElementById('despack'); // Get the target element
+    var offset = 60; // Set the offset (adjust as needed)
+    
+    // Scroll to the target element with an offset
+    window.scrollTo({
+      top: target.offsetTop - offset,
+      behavior: 'smooth' // Smooth scrolling
+    });
+  }
+  </script>
+      
 </main>
 {{/content}}{{/extend}}

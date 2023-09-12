@@ -41,12 +41,24 @@
 
   </div>
 </section> -->
-<section class="bg-white overflow-hidden min-h-screen mt-20">
-  <h2 class="text-4xl lg:text-7xl text-blue-500 flex justify-center m-5" style="font-family: 'Bebas Neue', sans-serif;">
+<section class="bg-white min-h-screen mt-20">
+  <h2 class="text-4xl lg:text-7xl text-blue-500 flex justify-center mt-5" style="font-family: 'Bebas Neue', sans-serif;">
    Contact
   </h2>  
-  <div class="container px-5 py-12 pb-24 mx-auto ">
+  <div class=" px-5 py-0 pb-4 mx-auto ">
     {{>contact-form}}
   </div>
 </section>
 {{/content}}{{/extend}}
+<script>
+  //PREFIL CONTACT FORM
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const subjectParam = urlParams.get('subject');
+
+    if (subjectParam) {
+      const subjectInput = document.getElementById('subject');
+      subjectInput.value = decodeURIComponent(subjectParam);
+    }
+  };
+</script>
