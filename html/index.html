@@ -23,7 +23,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
     />
-    <title>Wicked HTML Starter</title>
+    <title>Daybreak Travel</title>
   </head>
 
   <body class="bg-white">
@@ -85,30 +85,16 @@
             <li>
               <a
                 class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
-                href="./index.html"
-                >home</a
-              >
-            </li>
-
-            <li>
-              <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
-                href="./blogpost.html"
-                >blog post</a
-              >
-            </li>
-            <li>
-              <a
-                class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
-                href="./now.html"
-                >now</a
+                href="#despack"
+                id="scroll-link"
+                >Design Packages</a
               >
             </li>
             <li>
               <a
                 class="px-4 text-lg font-bold tracking-tighter transition duration-500 ease-in-out transform rounded-lg hover:text-black sr-only:mt-2 tracking-relaxed lg:ml-4 focus:outline-none focus:shadow-outline"
                 href="./contact.html"
-                >contact</a
+                >Contact</a
               >
             </li>
           </ul>
@@ -169,14 +155,13 @@
 
         <h1 class="p-0 mt-20 lg:mt-40 mx-5 tracking-tighter flex justify-end">
           <span class="text-1xl leading-none lg:text-4xl text-black">
-            <a href="#contact">
-              <button
-                class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300"
-                style="font-family: 'Bebas Neue', sans-serif"
-              >
-                Get Started
-              </button>
-            </a>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300"
+              style="font-family: 'Bebas Neue', sans-serif"
+              onclick="scrollToDespack()"
+            >
+              Get Started
+            </button>
           </span>
         </h1>
       </section>
@@ -300,6 +285,7 @@
         <h2
           class="text-4xl lg:text-7xl text-blue-500 flex justify-center pt-5"
           style="font-family: 'Bebas Neue', sans-serif"
+          id="despack"
         >
           Design Packages
         </h2>
@@ -333,7 +319,10 @@
                       <b class="text-red-500">fast and efficient</b> website
                       launch. This package includes:
                     </p>
-                    <ul class="items-center block list-disc px-5">
+                    <ul
+                      class="items-center block list-disc px-5"
+                      style="min-height: 180px"
+                    >
                       <li>
                         A client consultation to align your vision with our
                         expertise.
@@ -347,9 +336,8 @@
                     </ul>
                     <div class="py-4">
                       <a
-                        href="./blogpost.html"
+                        href="./design-packages.html"
                         class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                        href="./blogpost.html"
                       >
                         learn more &rightarrow;
                       </a>
@@ -387,7 +375,10 @@
                       want to craft a website that aligns perfectly with their
                       unique branding. This comprehensive package offers:
                     </p>
-                    <ul class="items-center block list-disc px-5">
+                    <ul
+                      class="items-center block list-disc px-5"
+                      style="min-height: 160px"
+                    >
                       <li>In-depth client consultation.</li>
                       <li>Expert graphic design services.</li>
                       <li>
@@ -404,9 +395,8 @@
                     </ul>
                     <div class="py-4">
                       <a
-                        href="./blogpost.html"
+                        href="./design-packages.html#premium"
                         class="p-3 pl-4 font-bold tracking-wide transition duration-500 ease-in-out transform hover:shadow-cinnabar hover:text-black font-base text-beta-300 shadow-whiterock"
-                        href="./blogpost.html"
                       >
                         learn more &rightarrow;
                       </a>
@@ -433,11 +423,13 @@
             with our stunning website designs. Elevate your online presence and
             attract more guests.
           </p>
-          <a
-            href="/contact.html"
-            class="inline-block bg-blue-500 hover:bg-blue-700 text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
-          >
-            Request a Quote Today
+          <a href="/contact.html?subject=Requesting%20a%20Consultation">
+            <button
+              class="bg-blue-500 text-2xl hover:bg-blue-700 text-white py-2 px-4 rounded shadow-lg transform hover:scale-105 transition-transform duration-300"
+              style="font-family: 'Bebas Neue', sans-serif"
+            >
+              Request a Consultation
+            </button>
           </a>
         </div>
       </section>
@@ -569,6 +561,39 @@
           design1Button.classList.remove('bg-blue-700', 'scale-105');
         });
       </script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script>
+        //SCROLL TO DESIGN PACKAGES WITH OFFSET
+        $(document).ready(function () {
+          $('#scroll-link').on('click', function (event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+
+            var target = $('#despack'); // Get the target element
+            var offset = 60; // Set the offset (adjust as needed)
+
+            // Scroll to the target element with an offset
+            $('html, body').animate(
+              {
+                scrollTop: target.offset().top - offset,
+              },
+              500
+            ); // Adjust the duration as needed
+          });
+        });
+
+        function scrollToDespack() {
+          var target = document.getElementById('despack'); // Get the target element
+          var offset = 60; // Set the offset (adjust as needed)
+
+          // Scroll to the target element with an offset
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth', // Smooth scrolling
+          });
+        }
+      </script>
     </main>
     <footer class="bg-black">
       <div
@@ -598,7 +623,7 @@
         >
           © 2023
           <a
-            href="https://twitter.com/wickedtemplates"
+            href="https://pmdaybreak.com/"
             class="ml-1 text-white hover:text-blue-500"
             rel="noopener noreferrer"
             target="_blank"
@@ -609,29 +634,7 @@
           <p
             class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
           >
-            <a
-              href="https://www.wickedtemplates.com/templates.html"
-              rel="noopener noreferrer"
-              >Templates</a
-            >
-          </p>
-          <p
-            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
-          >
-            <a
-              href="https://www.wickedtemplates.com/demos.html"
-              rel="noopener noreferrer"
-              >Freebies</a
-            >
-          </p>
-          <p
-            class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 hover:text-blue-500"
-          >
-            <a
-              href="https://www.wickedtemplates.com/pricing.html"
-              rel="noopener noreferrer"
-              >Pricing</a
-            >
+            <a href="/contact.html" rel="noopener noreferrer">Contact Us</a>
           </p>
         </nav>
         <span
@@ -648,20 +651,6 @@
             >
               <path
                 d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-              ></path>
-            </svg>
-          </a>
-          <a class="ml-3 text-white hover:text-blue-500">
-            <svg
-              fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
               ></path>
             </svg>
           </a>
