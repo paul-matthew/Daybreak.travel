@@ -260,3 +260,88 @@
   display: block; /* Ensures the button takes up full width */
   right: 10px; /* Your other styles for the button */
 }
+
+/*SPINNING COIN*/
+
+/* Add this CSS to your stylesheet */
+.coin {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.coin .circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.coin .circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the circular container */
+}
+
+.coin:hover .front {
+  transform: rotateY(180deg);
+}
+
+.coin:hover .back {
+  transform: rotateY(0deg);
+}
+
+/*ABOUT US Card hover*/
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.card h4 {
+  transition: opacity 0.3s ease-in-out;
+  margin-bottom: 0; /* Remove margin to align the <p> with the <h4> */
+}
+
+
+
+.card p {
+  margin-top: 0; /* Remove margin to align the <p> with the <h4> */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover p {
+  opacity: 1;
+}
